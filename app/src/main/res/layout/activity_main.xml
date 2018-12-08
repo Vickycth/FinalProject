@@ -6,67 +6,57 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/catPic"
-        android:layout_width="352dp"
-        android:layout_height="350dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
-        android:contentDescription="TODO - fill w cat pics from api"
-        android:scaleType="fitXY"
-        android:visibility="visible"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toTopOf="@id/sep_line"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@mipmap/ic_launcher" />
+        app:layout_constraintTop_toTopOf="parent">
+    </android.support.v4.view.ViewPager>
 
-    <Button
-        android:id="@+id/buttonRight"
-        android:layout_width="wrap_content"
-        android:layout_height="49dp"
-        android:layout_marginStart="23dp"
-        android:layout_marginLeft="23dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginBottom="50dp"
-        android:text="YES"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <View
+        android:id="@+id/sep_line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_margin="0dp"
+        android:padding="0dp"
+        android:background="@color/sep_line_white"
+        app:layout_constraintBottom_toTopOf="@id/rg_menu_bar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonMid"
-        app:layout_constraintTop_toBottomOf="@+id/catPic"
-        app:layout_constraintVertical_bias="0.239" />
-
-    <Button
-        android:id="@+id/buttonMid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="SUPERLIKE"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonRight"
-        app:layout_constraintStart_toEndOf="@+id/buttonLeft"
-        app:layout_constraintTop_toBottomOf="@+id/catPic"
-        app:layout_constraintVertical_bias="0.194" />
-
-    <Button
-        android:id="@+id/buttonLeft"
-        android:layout_width="wrap_content"
-        android:layout_height="46dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="380dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:text="NO"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonMid"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.09" />
+        app:layout_constraintTop_toBottomOf="@id/viewpager" />
 
+    <RadioGroup
+        android:id="@+id/rg_menu_bar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_margin="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/rb_cats"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_cats"
+            android:text="@string/tab_menu_cats" />
+
+        <RadioButton
+            android:id="@+id/rb_like"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_cats"
+            android:text="@string/tab_menu_like" />
+
+        <RadioButton
+            android:id="@+id/rb_about"
+            style="@style/tab_menu_item"
+            android:drawableTop="@drawable/tab_menu_cats"
+            android:text="@string/tab_menu_about" />
+    </RadioGroup>
 
 </android.support.constraint.ConstraintLayout>

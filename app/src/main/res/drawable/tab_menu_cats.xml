@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- icon selector for radio button in bottom RadioGroup menu bar -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@mipmap/tab_cats_pressed" android:state_checked="true" />
+    <item android:drawable="@mipmap/tab_cats_normal" android:state_checked="false"/>
+</selector>

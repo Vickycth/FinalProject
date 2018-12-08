@@ -3,4 +3,16 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <!-- radio button background color -->
+    <color name="tab_unselected">#00FFFFFF</color>
+    <color name="tab_selected">#FFC4C4C4</color>
+    <!-- radio button text color -->
+    <color name="text_unselected">#8D7A71</color>
+    <color name="text_selected">#FFC800</color>
+
+    <color name="sep_line_white">#E5E5E5</color>
+    <color name="text_gray">#8D7A71</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_yellow">#FFC800</color>
+
 </resources>
