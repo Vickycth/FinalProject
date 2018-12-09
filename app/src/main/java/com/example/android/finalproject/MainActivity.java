@@ -62,6 +62,10 @@ public class MainActivity extends AppCompatActivity implements
         // ViewPager adapter
         MyViewPagerAdapter adapter = new MyViewPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
+        // Set the number of pages that should be retained to either side of the current page
+        // in the view hierarchy in an idle state. Pages beyond this limit will be recreated
+        // from the adapter when needed. (set 2 will retain all 3 pages)
+        viewPager.setOffscreenPageLimit(listFragment.size() - 1);
     }
 
     //
