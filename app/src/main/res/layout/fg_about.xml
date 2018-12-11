@@ -9,6 +9,6 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:text="Developers: \nVicky Cai \nMinjoo Kim \n\n\n\nAs students of the University of Illinois, we created Cat Tinder for their CS125 project that required building an Android app. We hope you enjoy tapping through the pictures and keeping track of which ones you like!  " />
 
 </FrameLayout>
